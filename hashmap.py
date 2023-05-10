@@ -41,55 +41,55 @@ class HashTable:
             bucket.append((key, val))
 
     # Return searched value with specific key
-    # def get_val(self, key):
+    def get_val(self, key):
 
-    # 	# Get the index from the key using
-    # 	# hash function
-    # 	hashed_key = hash(key) % self.size
+        # Get the index from the key using
+        # hash function
+        hashed_key = hash(key) % self.size
 
-    # 	# Get the bucket corresponding to index
-    # 	bucket = self.hash_table[hashed_key]
+        # Get the bucket corresponding to index
+        bucket = self.hash_table[hashed_key]
 
-    # 	found_key = False
-    # 	for index, record in enumerate(bucket):
-    # 		record_key, record_val = record
+        found_key = False
+        for index, record in enumerate(bucket):
+            record_key, record_val = record
 
-    # 		# check if the bucket has same key as
-    # 		# the key being searched
-    # 		if record_key == key:
-    # 			found_key = True
-    # 			break
+            # check if the bucket has same key as
+            # the key being searched
+            if record_key == key:
+                found_key = True
+                break
 
-    # 	# If the bucket has same key as the key being searched,
-    # 	# Return the value found
-    # 	# Otherwise indicate there was no record found
-    # 	if found_key:
-    # 		return record_val
-    # 	else:
-    # 		return "No record found"
+        # If the bucket has same key as the key being searched,
+        # Return the value found
+        # Otherwise indicate there was no record found
+        if found_key:
+            return record_val
+        else:
+            return "No record found"
 
-    # # Remove a value with specific key
-    # def delete_val(self, key):
+    # Remove a value with specific key
+    def delete_val(self, key):
 
-    # 	# Get the index from the key using
-    # 	# hash function
-    # 	hashed_key = hash(key) % self.size
+        # Get the index from the key using
+        # hash function
+        hashed_key = hash(key) % self.size
 
-    # 	# Get the bucket corresponding to index
-    # 	bucket = self.hash_table[hashed_key]
+        # Get the bucket corresponding to index
+        bucket = self.hash_table[hashed_key]
 
-    # 	found_key = False
-    # 	for index, record in enumerate(bucket):
-    # 		record_key, record_val = record
+        found_key = False
+        for index, record in enumerate(bucket):
+            record_key, record_val = record
 
-    # 		# check if the bucket has same key as
-    # 		# the key to be deleted
-    # 		if record_key == key:
-    # 			found_key = True
-    # 			break
-    # 	if found_key:
-    # 		bucket.pop(index)
-    # 	return
+            # check if the bucket has same key as
+            # the key to be deleted
+            if record_key == key:
+                found_key = True
+                break
+        if found_key:
+            bucket.pop(index)
+        return
 
     # To print the items of hash map
     def __str__(self):
@@ -118,15 +118,3 @@ print()
 # # delete or remove a value
 # hash_table.delete_val('portal@example.com')
 # print(hash_table)
-
-
-# second method
-
-# def get_hash(key):
-#     h = 0
-#     for char in key:
-#         h += ord(char)
-#     return h % 100
-
-
-# print(get_hash("hello"))
