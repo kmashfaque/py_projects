@@ -1,7 +1,7 @@
 
 # # for complexity O(n2)
 
-arr = [6, 10, 2, 9, 4, 12, 9, 111]
+arr = [6, 10, 2, 9, 4, 12, 9, 0]
 
 
 # def min_val(arr):
@@ -25,6 +25,7 @@ arr = [6, 10, 2, 9, 4, 12, 9, 111]
 # print(min_val(arr))
 
 
+# complexity with O(n)
 def min_val2(arr):
     curr_elem = arr[0]
 
